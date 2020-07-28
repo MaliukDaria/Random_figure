@@ -1,4 +1,12 @@
-package PACKAGE_NAME;
+public abstract class Figure {
+    double area;
+    Colour colour;
 
-public class Figure {
+    abstract void drawFigure();
+
+    abstract double calculateArea();
+
+    Colour getColour() {
+        return this.colour;
+    }
 }
