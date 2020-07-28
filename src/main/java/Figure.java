@@ -1,3 +1,7 @@
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public abstract class Figure {
     double area;
     Colour colour;
@@ -9,4 +13,14 @@ public abstract class Figure {
     Colour getColour() {
         return this.colour;
     }
+
+    double getArea(){
+        return this.area;
+    }
+
+/*    Figure randomFigureGeneration()
+    {
+        ArrayList<Figure> figureList = new ArrayList<>();
+    }*/
+
 }
