@@ -1,14 +1,14 @@
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure {
     double baseA;
     double baseB;
     double side;
     double middleLine;
 
     public IsoscelesTrapezoid(double baseA, double baseB, double side, Colour colour) {
+        super("isosceles trapezoid",colour);
         this.baseA = baseA;
         this.baseB = baseB;
         this.side = side;
-        this.colour = colour;
         this.area = calculateArea();
         this.middleLine = calculateMiddleLine();
     }
@@ -29,4 +29,5 @@ public class IsoscelesTrapezoid extends Figure{
     public String toString() {
         return "IsoscelesTrapezoid: "+ "area = " + this.area+", middleLine = " + this.middleLine + ", colour - " + this.colour;
     }
+
 }

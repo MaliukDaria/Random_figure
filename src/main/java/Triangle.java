@@ -5,10 +5,10 @@ public class Triangle extends Figure{
     double median;
 
     public Triangle(double sideA, double sideB, double sideC, Colour colour) {
+        super("triangle",colour);
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
-        this.colour = colour;
         this.area = calculateArea();
         this.median = calculateMedian();
     }
@@ -29,4 +29,5 @@ public class Triangle extends Figure{
     public String toString() {
         return "Triangle: "+ "area = " + this.area+", median = " + this.median + ", colour - " + this.colour;
     }
+
 }

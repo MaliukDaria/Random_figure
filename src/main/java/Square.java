@@ -1,13 +1,17 @@
-public class Square extends Figure{
-   int length;
-   int height;
-   int perimeter;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
+public class Square extends Figure {
+   double length;
+   double height;
+   double perimeter;
 
-    public Square(int length, int height, Colour colour) {
+    public Square(double length, double height, Colour colour) {
+        super("square",colour);
         this.length = length;
         this.height = height;
-        this.colour = colour;
         this.area = calculateArea();
         this.perimeter = calculatePerimeter();
     }
@@ -20,7 +24,7 @@ public class Square extends Figure{
         return length * height;
     }
 
-    int calculatePerimeter() {
+    double calculatePerimeter() {
         return 2*(this.length+this.height);
     }
 
