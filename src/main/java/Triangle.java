@@ -1,14 +1,14 @@
-public class Triangle extends Figure{
+public class Triangle extends Figure {
     double sideA;
     double sideB;
     double sideC;
     double median;
 
-    public Triangle(double sideA, double sideB, double sideC, Colour colour) {
-        super("triangle",colour);
+    public Triangle(double sideA, Colour colour) {
+        super("triangle", colour);
         this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideC = sideC;
+        this.sideB = sideA;
+        this.sideC = sideA;
         this.area = calculateArea();
         this.median = calculateMedian();
     }
@@ -27,7 +27,6 @@ public class Triangle extends Figure{
     }
 
     public String toString() {
-        return "Triangle: "+ "area = " + this.area+", median = " + this.median + ", colour - " + this.colour;
+        return super.toString() + String.format("side:%.2f median:%.2f", sideA, median);
     }
-
 }

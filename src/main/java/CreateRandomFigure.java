@@ -7,11 +7,11 @@ public abstract class CreateRandomFigure {
     public static Colour createRandomColour() {
         return Colour.values()[(int) (Math.random() * (Colour.values().length))];
     }
-    public static List<Figure> createRandomFigureList ()
-    {
+
+    public static List<Figure> createRandomFigureList() {
 
         List<Figure> randomFigureList = new ArrayList<>();
-        int numberOfFigures = (int) (Math.random()*10+1);
+        int numberOfFigures = (int) (Math.random() * 10 + 1);
         for (int i = 0; i < numberOfFigures; i++) {
             CreateRandomFigure randomFigure = CreateRandomFigure.chooseRandomFigure();
             Figure figure = randomFigure.createRandomFigure();
@@ -21,7 +21,7 @@ public abstract class CreateRandomFigure {
     }
 
     public static CreateRandomFigure chooseRandomFigure() {
-        switch ((int) (Math.random() * 3)+1) {
+        switch ((int) (Math.random() * 3) + 1) {
             case 1:
                 return new CreateRandomCircle();
             case 2:

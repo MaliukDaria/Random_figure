@@ -5,7 +5,7 @@ public class IsoscelesTrapezoid extends Figure {
     double middleLine;
 
     public IsoscelesTrapezoid(double baseA, double baseB, double side, Colour colour) {
-        super("isosceles trapezoid",colour);
+        super("isosceles trapezoid", colour);
         this.baseA = baseA;
         this.baseB = baseB;
         this.side = side;
@@ -13,10 +13,9 @@ public class IsoscelesTrapezoid extends Figure {
         this.middleLine = calculateMiddleLine();
     }
 
-    double calculateMiddleLine (){
-        return (this.baseA+this.baseA)/2;
+    double calculateMiddleLine() {
+        return (this.baseA + this.baseA) / 2;
     }
-
 
     void drawFigure() {
         System.out.println((char) (9674));
@@ -27,7 +26,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public String toString() {
-        return "IsoscelesTrapezoid: "+ "area = " + this.area+", middleLine = " + this.middleLine + ", colour - " + this.colour;
+        return super.toString() + String.format("base a:%.2f base b:%.2f side:%.2f middleLine:%.2f ", baseA, baseB, side, middleLine);
     }
 
 }

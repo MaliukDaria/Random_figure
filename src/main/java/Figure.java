@@ -1,7 +1,3 @@
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public abstract class Figure {
     String name;
     double area;
@@ -20,7 +16,12 @@ public abstract class Figure {
         return this.colour;
     }
 
-    double getArea(){
+    double getArea() {
         return this.area;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Figure:%s area:%.2f colour:%s ", name, area, colour);
     }
 }
