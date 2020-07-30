@@ -14,7 +14,10 @@ public abstract class CreateRandomFigure {
         int numberOfFigures = (int) (Math.random() * 10 + 1);
         for (int i = 0; i < numberOfFigures; i++) {
             CreateRandomFigure randomFigure = CreateRandomFigure.chooseRandomFigure();
-            Figure figure = randomFigure.createRandomFigure();
+            Figure figure = null;
+            if (randomFigure != null) {
+                figure = randomFigure.createRandomFigure();
+            }
             randomFigureList.add(figure);
         }
         return randomFigureList;
