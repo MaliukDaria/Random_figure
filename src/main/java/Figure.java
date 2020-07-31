@@ -1,27 +1,23 @@
 public abstract class Figure {
-    String name;
-    double area;
-    Colour colour;
+    protected final String name;
+    protected final double area;
+    protected final Colour colour;
 
     public Figure(String name, Colour colour) {
         this.name = name;
         this.colour = colour;
+        this.area = this.calculateArea();
     }
 
-    abstract void drawFigure();
+    public abstract void drawFigure();
 
-    abstract double calculateArea();
+    protected abstract double calculateArea();
 
-    Colour getColour() {
+    public Colour getColour() {
         return this.colour;
     }
 
-    double getArea() {
+    public double getArea() {
         return this.area;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("Figure:%s area:%.2f colour:%s ", name, area, colour);
     }
 }

@@ -1,29 +1,40 @@
 public class Square extends Figure {
-    double length;
-    double height;
-    double perimeter;
+   private final double length;
+   private final double height;
+   private final double perimeter;
 
     public Square(double length, double height, Colour colour) {
         super("square", colour);
         this.length = length;
         this.height = height;
-        this.area = calculateArea();
         this.perimeter = calculatePerimeter();
     }
-
-    void drawFigure() {
-        System.out.println((char) (8414));
+    public void drawFigure(){
+        System.out.println(this);
     }
 
-    double calculateArea() {
+    public double getLength() {
+        return length;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getPerimeter() {
+        return perimeter;
+    }
+
+    protected double calculateArea() {
         return length * height;
     }
 
-    double calculatePerimeter() {
+    private double calculatePerimeter() {
         return 2 * (this.length + this.height);
     }
 
+    @Override
     public String toString() {
-        return super.toString() + String.format("perimeter:%.2f length:%.2f hight:%.2f", perimeter, length, height);
+        return String.format("Figure:%s area:%.2f colour:%s perimeter:%.2f length:%.2f height:%.2f", name, area, colour, perimeter, length, height);
     }
 }

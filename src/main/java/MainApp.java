@@ -5,7 +5,9 @@ public class MainApp {
         List<Figure> randomFigureList = CreateRandomFigure.createRandomFigureList();
         for (Figure figure : randomFigureList
         ) {
-            System.out.println(figure.toString());
+            figure.drawFigure();
         }
+        Square square = new Square(4,6,Colour.RED);
+
     }
 }
