@@ -1,12 +1,11 @@
 public abstract class Figure {
-    protected final String name;
-    protected final double area;
-    protected final Colour colour;
+    protected String name;
+    protected double area;
+    protected Colour colour;
 
     public Figure(String name, Colour colour) {
         this.name = name;
         this.colour = colour;
-        this.area = this.calculateArea();
     }
 
     public abstract void drawFigure();
@@ -14,10 +13,14 @@ public abstract class Figure {
     protected abstract double calculateArea();
 
     public Colour getColour() {
-        return this.colour;
+        return colour;
     }
 
     public double getArea() {
-        return this.area;
+        return area;
+    }
+
+    public String getName() {
+        return name;
     }
 }

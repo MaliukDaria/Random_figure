@@ -5,6 +5,7 @@ public class Circle extends Figure {
     public Circle(double radius, Colour colour) {
         super("circle", colour);
         this.radius = radius;
+        this.area = calculateArea();
         this.circumference = calculateCircumference();
     }
 
@@ -30,6 +31,11 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return String.format("Figure:%s area:%.2f colour:%s radius:%.2f circumference:%.2f", name, area, colour, radius, circumference);
+        return String.format("Figure:%s" +
+                " area:%.2f" +
+                " colour:%s" +
+                " radius:%.2f" +
+                " circumference:%.2f",
+                name, area, colour, radius, circumference);
     }
 }

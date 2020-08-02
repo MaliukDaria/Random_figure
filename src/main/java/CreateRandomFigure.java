@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class CreateRandomFigure {
-    abstract Figure createRandomFigure();
+   protected abstract Figure createRandomFigure();
 
-    public static Colour createRandomColour() {
+    protected static Colour chooseRandomColour() {
         return Colour.values()[(int) (Math.random() * (Colour.values().length))];
     }
 
@@ -14,27 +14,28 @@ public abstract class CreateRandomFigure {
         int numberOfFigures = (int) (Math.random() * 10 + 1);
         for (int i = 0; i < numberOfFigures; i++) {
             CreateRandomFigure randomFigure = CreateRandomFigure.chooseRandomFigure();
-            Figure figure = null;
-            if (randomFigure != null) {
-                figure = randomFigure.createRandomFigure();
-            }
+            Figure figure  = randomFigure.createRandomFigure();
             randomFigureList.add(figure);
         }
         return randomFigureList;
     }
 
     public static CreateRandomFigure chooseRandomFigure() {
+        CreateRandomFigure randomFigure = null;
         switch ((int) (Math.random() * 3) + 1) {
             case 1:
-                return new CreateRandomCircle();
+                randomFigure = new CreateRandomCircle(); break;
             case 2:
-                return new CreateRandomIsoscelesTrapezoid();
+                randomFigure =  new CreateRandomIsoscelesTrapezoid(); break;
             case 3:
-                return new CreateRandomSquare();
+                randomFigure =  new CreateRandomSquare(); break;
             case 4:
-                return new CreateRandomTriangle();
+                randomFigure =  new CreateRandomTriangle(); break;
         }
-        return null;
+        if (randomFigure==null) {
+            throw new NullPointerException("The random figure isn't chosen");
+        }
+        return randomFigure;
     }
 }
 

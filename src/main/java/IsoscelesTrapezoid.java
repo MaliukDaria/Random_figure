@@ -9,12 +9,13 @@ public class IsoscelesTrapezoid extends Figure {
         this.baseA = baseA;
         this.baseB = baseB;
         this.side = side;
-        // this.area = calculateArea();
+        this.area = calculateArea();
         this.middleLine = calculateMiddleLine();
     }
     public void drawFigure(){
         System.out.println(this);
     }
+
     public double getBaseA() {
         return baseA;
     }
@@ -32,15 +33,23 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     private double calculateMiddleLine() {
-        return (this.baseA + this.baseA) / 2;
+        return (baseA + baseA) / 2;
     }
 
     protected double calculateArea() {
-        return ((this.baseA + this.baseB) / 2) * Math.sqrt(Math.pow(this.side, 2) - (Math.pow((this.baseA - this.baseB), 2)) / 4);
+        return ((baseA + baseB) / 2) *
+                Math.sqrt(Math.pow(side, 2) - (Math.pow((baseA - baseB), 2)) / 4);
     }
 
     @Override
     public String toString() {
-        return String.format("Figure:%s area:%.2f colour:%s base a:%.2f base b:%.2f side:%.2f middleLine:%.2f ", name, area, colour, baseA, baseB, side, middleLine);
+        return String.format("Figure:%s" +
+                " area:%.2f" +
+                " colour:%s" +
+                " base a:%.2f" +
+                " base b:%.2f" +
+                " side:%.2f" +
+                " middleLine:%.2f ",
+                name, area, colour, baseA, baseB, side, middleLine);
     }
 }

@@ -9,6 +9,7 @@ public class Triangle extends Figure {
         this.sideA = sideA;
         this.sideB = sideA;
         this.sideC = sideA;
+        this.area = calculateArea();
         this.median = calculateMedian();
     }
 
@@ -33,16 +34,21 @@ public class Triangle extends Figure {
     }
 
     private double calculateMedian() {
-        return (2 * Math.pow(this.sideB, 2) + 2 * Math.pow(this.sideC, 2) - Math.pow(this.sideA, 2)) / 4;
+        return (2 * Math.pow(sideB, 2) + 2 * Math.pow(sideC, 2) - Math.pow(sideA, 2)) / 4;
     }
 
     protected double calculateArea() {
-        double p = (this.sideA + this.sideB + this.sideC) / 2;
-        return Math.sqrt(p * (p - this.sideA) * (p - this.sideB) * (p - this.sideC));
+        double p = (sideA + sideB + sideC) / 2;
+        return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
     }
 
     @Override
     public String toString() {
-        return String.format("Figure:%s area:%.2f colour:%s side:%.2f median:%.2f", name, area, colour, sideA, median);
+        return String.format("Figure:%s" +
+                " area:%.2f" +
+                " colour:%s" +
+                " side:%.2f" +
+                " median:%.2f",
+                name, area, colour, sideA, median);
     }
 }
