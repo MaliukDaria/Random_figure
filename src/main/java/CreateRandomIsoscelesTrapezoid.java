@@ -4,6 +4,6 @@ public class CreateRandomIsoscelesTrapezoid extends CreateRandomFigure {
         return new IsoscelesTrapezoid((int) (Math.random() * 10 + 1),
                 (int) (Math.random() * 10 + 1),
                 (int) (Math.random() * 10 + 1),
-                CreateRandomFigure.chooseRandomColour());
+                Colour.chooseRandomColour());
     }
 }
