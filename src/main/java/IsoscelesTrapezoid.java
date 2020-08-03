@@ -1,8 +1,8 @@
 public class IsoscelesTrapezoid extends Figure {
-    private final double baseA;
-    private final double baseB;
-    private final double side;
-    private final double middleLine;
+    private double baseA;
+    private double baseB;
+    private double side;
+    private double middleLine;
 
     public IsoscelesTrapezoid(double baseA, double baseB, double side, Colour colour) {
         super("isosceles trapezoid", colour);

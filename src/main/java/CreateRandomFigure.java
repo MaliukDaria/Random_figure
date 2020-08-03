@@ -1,3 +1,3 @@
-public abstract class CreateRandomFigure {
-   protected abstract Figure createRandomFigure();
+public interface CreateRandomFigure {
+    Figure createRandomFigure();
 }

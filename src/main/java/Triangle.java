@@ -1,8 +1,8 @@
 public class Triangle extends Figure {
-    private final double sideA;
-    private final double sideB;
-    private final double sideC;
-    private final double median;
+    private double sideA;
+    private double sideB;
+    private double sideC;
+    private double median;
 
     public Triangle(double sideA, Colour colour) {
         super("triangle", colour);

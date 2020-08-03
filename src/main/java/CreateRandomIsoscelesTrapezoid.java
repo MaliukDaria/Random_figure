@@ -1,6 +1,6 @@
-public class CreateRandomIsoscelesTrapezoid extends CreateRandomFigure {
+public class CreateRandomIsoscelesTrapezoid implements CreateRandomFigure {
     @Override
-    protected Figure createRandomFigure() {
+    public Figure createRandomFigure() {
         return new IsoscelesTrapezoid((int) (Math.random() * 10 + 1),
                 (int) (Math.random() * 10 + 1),
                 (int) (Math.random() * 10 + 1),

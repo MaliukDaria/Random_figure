@@ -1,6 +1,6 @@
-public class CreateRandomSquare extends CreateRandomFigure {
+public class CreateRandomSquare implements CreateRandomFigure {
     @Override
-    protected Figure createRandomFigure() {
+    public Figure createRandomFigure() {
         return new Square((int) (Math.random() * 10 + 1), (int) (Math.random() * 10 + 1),
                 Colour.chooseRandomColour());
     }
