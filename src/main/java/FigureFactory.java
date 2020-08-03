@@ -2,11 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FigureFactory {
-    public static Figure createRandomFigure() {
-        CreateRandomFigure randomFigure = FigureFactory.chooseRandomFigure();
-        return randomFigure.createRandomFigure();
-    }
-
     public static List<Figure> createRandomFigureList() {
 
         List<Figure> randomFigureList = new ArrayList<>();
@@ -28,7 +23,7 @@ public class FigureFactory {
             default -> null;
         };
         if (randomFigure == null) {
-            throw new NullPointerException("The random figure isn't chosen");
+            throw new RuntimeException("The random figure isn't chosen");
         }
         return randomFigure;
     }

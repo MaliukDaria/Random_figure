@@ -1,6 +1,6 @@
-public class CreateRandomTriangle extends CreateRandomFigure {
+public class CreateRandomTriangle implements CreateRandomFigure {
     @Override
-    protected Figure createRandomFigure() {
+    public Figure createRandomFigure() {
         return new Triangle((int) (Math.random() * 10 + 1),
                 Colour.chooseRandomColour());
     }

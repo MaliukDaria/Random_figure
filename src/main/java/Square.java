@@ -1,7 +1,7 @@
 public class Square extends Figure {
-   private final double length;
-   private final double height;
-   private final double perimeter;
+   private double length;
+   private double height;
+   private double perimeter;
 
     public Square(double length, double height, Colour colour) {
         super("square", colour);

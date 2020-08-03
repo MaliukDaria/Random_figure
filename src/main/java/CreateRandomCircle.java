@@ -1,6 +1,6 @@
-public class CreateRandomCircle extends CreateRandomFigure {
+public class CreateRandomCircle implements CreateRandomFigure {
     @Override
-    protected Figure createRandomFigure() {
+    public Figure createRandomFigure() {
         return new Circle((int) (Math.random() * 10 + 1), Colour.chooseRandomColour());
     }
 }

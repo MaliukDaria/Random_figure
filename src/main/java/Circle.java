@@ -1,6 +1,6 @@
 public class Circle extends Figure {
-    private final double radius;
-    private final double circumference;
+    private double radius;
+    private double circumference;
 
     public Circle(double radius, Colour colour) {
         super("circle", colour);
