@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.baseA = baseA;
         this.baseB = baseB;
         this.side = side;
-        this.area = calculateArea();
+        super.setArea(calculateArea());
         this.middleLine = calculateMiddleLine();
     }
     public void drawFigure(){
@@ -50,6 +50,6 @@ public class IsoscelesTrapezoid extends Figure {
                 " base b:%.2f" +
                 " side:%.2f" +
                 " middleLine:%.2f ",
-                name, area, colour, baseA, baseB, side, middleLine);
+                super.getName(), super.getArea(), super.getColour(), baseA, baseB, side, middleLine);
     }
 }

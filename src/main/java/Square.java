@@ -7,7 +7,7 @@ public class Square extends Figure {
         super("square", colour);
         this.length = length;
         this.height = height;
-        this.area = calculateArea();
+        super.setArea(calculateArea());
         this.perimeter = calculatePerimeter();
     }
     public void drawFigure(){
@@ -42,6 +42,6 @@ public class Square extends Figure {
                 " perimeter:%.2f" +
                 " length:%.2f" +
                 " height:%.2f",
-                name, area, colour, perimeter, length, height);
+                super.getName(), super.getArea(), super.getColour(), perimeter, length, height);
     }
 }

@@ -1,7 +1,7 @@
 public abstract class Figure {
-    protected  String name;
-    protected double area;
-    protected  Colour colour;
+    private  String name;
+    private double area;
+    private  Colour colour;
 
     public Figure(String name, Colour colour) {
         this.name = name;
@@ -22,5 +22,9 @@ public abstract class Figure {
 
     public String getName() {
         return name;
+    }
+
+    protected void setArea(double area) {
+        this.area = area;
     }
 }

@@ -5,7 +5,7 @@ public class Circle extends Figure {
     public Circle(double radius, Colour colour) {
         super("circle", colour);
         this.radius = radius;
-        this.area = calculateArea();
+        super.setArea(calculateArea());
         this.circumference = calculateCircumference();
     }
 
@@ -36,6 +36,6 @@ public class Circle extends Figure {
                 " colour:%s" +
                 " radius:%.2f" +
                 " circumference:%.2f",
-                name, area, colour, radius, circumference);
+                super.getName(), super.getArea(), super.getColour(), radius, circumference);
     }
 }

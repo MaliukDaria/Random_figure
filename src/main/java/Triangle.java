@@ -9,7 +9,7 @@ public class Triangle extends Figure {
         this.sideA = sideA;
         this.sideB = sideA;
         this.sideC = sideA;
-        this.area = calculateArea();
+        super.setArea(calculateArea());
         this.median = calculateMedian();
     }
 
@@ -49,6 +49,6 @@ public class Triangle extends Figure {
                 " colour:%s" +
                 " side:%.2f" +
                 " median:%.2f",
-                name, area, colour, sideA, median);
+                super.getName(), super.getArea(), super.getColour(), sideA, median);
     }
 }
