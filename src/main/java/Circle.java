@@ -1,0 +1,41 @@
+public class Circle extends Figure {
+    private double radius;
+    private double circumference;
+
+    public Circle(double radius, Colour colour) {
+        super("circle", colour);
+        this.radius = radius;
+        super.setArea(calculateArea());
+        this.circumference = calculateCircumference();
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public double getCircumference() {
+        return circumference;
+    }
+
+    public void drawFigure(){
+        System.out.println(this);
+    }
+
+    protected double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    private double calculateCircumference() {
+        return 2 * Math.PI * radius;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Figure:%s" +
+                " area:%.2f" +
+                " colour:%s" +
+                " radius:%.2f" +
+                " circumference:%.2f",
+                super.getName(), super.getArea(), super.getColour(), radius, circumference);
+    }
+}
